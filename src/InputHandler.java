@@ -37,8 +37,9 @@ public class InputHandler {
         returnMoreThan();
         try {
             number = scanner.nextInt();
+            if (number <= 0) throw new Exception();
         } catch (Exception e) {
-            System.out.print("Неверный формат записи. Пожалуйста, введите число.\n");
+            System.out.print("Неверный формат записи. Пожалуйста, введите натуральное число.\n");
             askNumber();
         }
         return number;
@@ -46,6 +47,6 @@ public class InputHandler {
 
     //Метод для вывода знака >
     private void returnMoreThan(){
-        System.out.print(">");
+        System.out.print("> ");
     }
 }
